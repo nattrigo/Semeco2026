@@ -1,0 +1,230 @@
+# -----------------------------------------------------------------------------
+# Read.me: this R code gets the raw-data on the Live Birth Records(SINASC)
+# from RMicrodatasus package available on Github
+#-------------------------------------------------------------------------------
+
+
+# Requirements ------------------------------------------------------------
+
+#- run bellow to install
+# install.packages("remotes")
+#remotes::install_github("rfsaldanha/microdatasus")
+
+# load packages
+library(microdatasus)
+library(here)
+
+
+# Get the data ------------------------------------------------------------
+
+
+## 2005-2006 ---------------------------------------------------------------
+
+
+# create the list to save all the data by year
+raw_data_list <- list()
+raw_data_list <- list()
+
+
+for (x in 2005:2006) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  # add year as attribute to raw-data 
+  attr(raw_data, "year") <- x
+  
+  # save raw-data in the list using the year as the name of it
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  # save data as .RDS object with the respective year in the name of the file
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+
+raw_data_2005 <- readRDS("./data/raw/health/SINASC/raw_data_2005.rds")
+df <- process_sinasc(raw_data_2005, municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2005.rds")
+
+
+raw_data_2006 <- readRDS("./data/raw/health/SINASC/raw_data_2006.rds")
+df <- process_sinasc(raw_data_2006, municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2006.rds")
+
+
+## 2007-2008 ---------------------------------------------------------------
+
+raw_data_list <- list()
+
+
+for (x in 2007:2008) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  attr(raw_data, "year") <- x
+  
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2007"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2007.rds")
+df <- process_sinasc(raw_data_list[["2008"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2008.rds")
+
+
+## 2009-2010 ---------------------------------------------------------------
+
+
+raw_data_list <- list()
+
+
+for (x in 2009:2010) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  attr(raw_data, "year") <- x
+  
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2009"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2009.rds")
+df <- process_sinasc(raw_data_list[["2010"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2010.rds")
+
+
+
+
+## 2011-2012 ---------------------------------------------------------------
+
+
+raw_data_list <- list()
+
+
+for (x in 2011:2012) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  attr(raw_data, "year") <- x
+  
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2011"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2011.rds")
+df <- process_sinasc(raw_data_list[["2012"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2012.rds")
+
+
+
+## 2013-2014 ---------------------------------------------------------------
+
+
+raw_data_list <- list()
+
+
+for (x in 2013:2014) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  attr(raw_data, "year") <- x
+  
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2013"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2013.rds")
+df <- process_sinasc(raw_data_list[["2014"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2014.rds")
+
+
+## 2015 --------------------------------------------------------------------
+
+raw_data <- fetch_datasus(year_start = 2015, year_end = 2015, information_system = "SINASC")
+saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", 2015, ".rds"))
+df <- process_sinasc(raw_data, municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2015.rds")
+
+
+## 2016-2017 ---------------------------------------------------------------
+
+raw_data_list <- list()
+
+
+for (x in 2016:2017) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  attr(raw_data, "year") <- x
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2016"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2016.rds")
+df <- process_sinasc(raw_data_list[["2017"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2017.rds")
+
+
+
+## 2018-2019 ---------------------------------------------------------------
+
+
+raw_data_list <- list()
+
+
+for (x in 2018:2019) {
+  
+  raw_data <- fetch_datasus(year_start = x, year_end = x, information_system = "SINASC")
+  
+  
+  
+  attr(raw_data, "year") <- x
+  
+  
+  raw_data_list[[as.character(x)]] <- raw_data
+  
+  saveRDS(raw_data, paste0("./data/raw/health/SINASC/raw_data_", x, ".rds"))
+  
+  
+}
+
+df <- process_sinasc(raw_data_list[["2018"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2018.rds")
+df <- process_sinasc(raw_data_list[["2019"]], municipality_data = TRUE)
+saveRDS(df, "./data/raw/health/SINASC/process/raw_data_2019.rds")
