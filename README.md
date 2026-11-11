@@ -13,10 +13,12 @@
 Os microdados do DATASUS usados no minicurso foram baixados com o pacote [`microdatasus`](https://github.com/rfsaldanha/microdatasus), de Raphael Saldanha.
 
 - *Documentação do pacote*: https://rfsaldanha.github.io/microdatasus/
+- *Tabela CID10*: [CID-10](http://www2.datasus.gov.br/cid10/V2008/cid10.htm)
 
 
 ## Dica Material Consulta:
 - **R Cheatsheets**: https://r-graph-gallery.com/cheatsheets
+- Exemplos de Tipos de *join*: [Join com dplyr - Rpubs](https://rpubs.com/CristianaFreitas/311735)
 
 ## Replication Package
 - Exemplo: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/Z1DGDB
