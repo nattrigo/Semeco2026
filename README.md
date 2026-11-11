@@ -1,6 +1,14 @@
 ## CRIE SEU PRÓPRIO NOTEBOOK:
 - Link para o **Google Colab - R**: [abrir notebook](https://colab.research.google.com/github/alvinntnu/python-notes/blob/master/python-basics/google-colab-r.ipynb)
 
+### Antes de começar (Colab)
+1. Abra o notebook pelo link acima e clique em **Arquivo → Salvar uma cópia no Drive** (assim você pode editar).
+2. Confira se o ambiente é **R**: menu **Ambiente de execução → Alterar o tipo de ambiente de execução → Tipo: R**.
+3. Para rodar uma célula: clique nela e aperte **Shift + Enter**.
+4. Para adicionar uma nova célula de código: **Ctrl + M** e depois **B** (abaixo). Também dá para clicar em **+ Código** no topo da página.
+
+> 💡 **Dica:** no RStudio/Posit Cloud, **Ctrl + Shift + M** insere o pipe `%>%`.
+
 ## Dica Material Consulta:
 - **R Cheatsheets**: https://r-graph-gallery.com/cheatsheets
 
