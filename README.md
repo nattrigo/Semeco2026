@@ -9,6 +9,12 @@
 
 > 💡 **Dica:** no RStudio/Posit Cloud, **Ctrl + Shift + M** insere o pipe `%>%`.
 
+## Dados: pacote microdatasus
+Os microdados do DATASUS usados no minicurso foram baixados com o pacote [`microdatasus`](https://github.com/rfsaldanha/microdatasus), de Raphael Saldanha.
+
+- *Documentação do pacote*: https://rfsaldanha.github.io/microdatasus/
+
+
 ## Dica Material Consulta:
 - **R Cheatsheets**: https://r-graph-gallery.com/cheatsheets
 
