@@ -1,3 +1,11 @@
+## Autoria e licença
+Todo o material deste repositório (notebooks, scripts, slides e textos) foi elaborado por **Natália Ferreira Trigo** para o minicurso *Introdução ao R aplicado à saúde* da 31ª SEMECO (UEL, 2026).
+
+Você pode usar e adaptar o conteúdo, desde que cite a autora.
+
+Os microdados são públicos e foram obtidos no DATASUS/Ministério da Saúde. O pacote `microdatasus` e os demais materiais indicados nos links pertencem aos seus respectivos autores.
+
+
 ## CRIE SEU PRÓPRIO NOTEBOOK:
 - Link para o **Google Colab - R**: [abrir notebook](https://colab.research.google.com/github/alvinntnu/python-notes/blob/master/python-basics/google-colab-r.ipynb)
 
