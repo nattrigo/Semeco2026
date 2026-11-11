@@ -17,6 +17,7 @@ Os microdados do DATASUS usados no minicurso foram baixados com o pacote [`micro
 
 ## Dica Material Consulta:
 - **R Cheatsheets**: https://r-graph-gallery.com/cheatsheets
+- Exemplos de Tipos de *join*: [Join com dplyr - Rpubs](https://rpubs.com/CristianaFreitas/311735)
 
 ## Replication Package
 - Exemplo: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/Z1DGDB
